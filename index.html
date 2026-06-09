@@ -1,1 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Game Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Game Library</h1>
+    <p class="muted">200+ games (catalog). Use search & filters to explore.</p>
 
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search games..." autocomplete="off" />
+      <select id="genre">
+        <option value="">All genres</option>
+      </select>
+      <select id="tag">
+        <option value="">All tags</option>
+      </select>
+    </div>
+
+    <div class="meta">
+      <span id="count" class="pill"></span>
+      <span id="pageInfo" class="pill"></span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="grid" class="grid" aria-live="polite"></section>
+
+    <nav class="pager">
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </nav>
+  </main>
+
+  <footer class="container muted">
+    Tip: Update <code>games.js</code> to replace links with your own hosted games.
+  </footer>
+
+  <script src="games.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
